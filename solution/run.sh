@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 # initialize variables to store image and container name
 IMAGE_NAME="intern1-container1"
