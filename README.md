@@ -1,5 +1,5 @@
 
-## How to Run the Solution in Docker
+## **How to Run the Solution in Docker**
 This solution is containerized using Docker environment.
 
 Prerequisites:
@@ -11,18 +11,18 @@ Steps:
 
 2. Build the Docker Image:
    Run the following command to build the Docker image.
-   "docker build -t <fill with container name> ."
+   ```docker build -t <fill with container name> .```
    - The -t flag tags the image with a memorable name.
    - The . at the end specifies the current directory as the build context.
 
 3. Run the Docker Container:
 Once the image is successfully built, run the container using the command below. 
-"docker run --rm <fill with container name>"
+```docker run --rm <fill with container name>```
 
 4. Expected Output
 After running the container, you will see the final merged data table and the transaction analysis printed directly to your console. 
 
-## Summary
+## **Summary**
 from the historical table of c1:
    there are 5 transactions:
       at 1.577956e+12  the balance is changed from 0 to 15000.0
