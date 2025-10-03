@@ -39,7 +39,7 @@ From the historical table of c2:<br />
 
 ## **Thinking Behind the Solution**
 **Data Merging and Consolidation**<br />
-To create a complete historical timeline, it was crucial to combine all records from all source tables without losing any data. An outer join (pd.merge(..., how="outer")) was chosen for this reason. This type of join keeps every record from both tables, creating NaN values where data doesn't exist in one of the sources for a given key. This ensures that every single timestamped event is included in the final dataset.<br />
+To create a complete historical timeline, it was crucial to combine all records from all source tables without losing any data. An outer join pd.merge ```(..., how="outer")``` was chosen for this reason. This type of join keeps every record from both tables, creating NaN values where data doesn't exist in one of the sources for a given key. This ensures that every single timestamped event is included in the final dataset.<br />
 
 **Handling Missing Data**<br />
-The outer join naturally results in records with missing information. Since information like account_id, name, and card_number is persistent, a forward fill (ffill()) was used. This method propagates the last valid observation forward, correctly filling in the user details for all subsequent events until a new change is recorded.<br />
+The outer join naturally results in records with missing information. Since information like ```account_id```, ```name```, and ```card_number``` is persistent, a forward fill ```ffill()``` was used. This method propagates the last valid observation forward, correctly filling in the user details for all subsequent events until a new change is recorded.<br />
